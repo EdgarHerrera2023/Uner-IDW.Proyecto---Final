@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contáctanos para preguntas, sugerencias o presupuestos personalizados. Encuéntranos en Concordia, Entre Ríos.">
+        <meta name="keywords" content="contacto, IDW SA, fiestas infantiles, presupuesto, Concordia, Entre Ríos, teléfono, email, WhatsApp">
+        <meta name="author" content="IDW SA">
+        <title>Contacto - Fiestas Infantiles Mágicas</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="assets/iconGlobo.ico" type="image/x-icon">
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+
+        <div id="alert-placeholder" class="fixed-top mt-3 text-center w-100" style="z-index: 1050;"></div>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas" height="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="salones.html">Salones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="presupuesto.html">Presupuesto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="institucional.html">Institucional</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item" id="nav-login-item">
+                                <a class="nav-link btn btn-primary text-white ms-2 px-3" href="login.html">Acceso Clientes</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-logout-item">
+                                <a class="nav-link btn btn-outline-danger ms-2 px-3" href="#" id="logout-btn-public">Cerrar Sesión</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-admin-link-container">
+                                <a class="nav-link btn btn-outline-info ms-2 px-3" href="admin/administracion.html" id="nav-admin-link">Administración</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container my-5">
+            <h1 class="text-center mb-5 section-title" data-aos="fade-up">Contáctanos</h1>
+
+            <div class="row">
+                <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-duration="1000">
+                    <h2 class="text-primary mb-4">Envíanos un Mensaje</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="name" required placeholder="Tu nombre y apellido">
+                            <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required placeholder="tu.email@ejemplo.com">
+                            <div class="invalid-feedback">Por favor, ingresa un email válido.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Teléfono (Opcional)</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+54 9 11 12345678">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="subject" required placeholder="Consulta general, Presupuesto, etc.">
+                            <div class="invalid-feedback">Por favor, ingresa un asunto.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Tu Mensaje</label>
+                            <textarea class="form-control" id="message" rows="5" required placeholder="Escribe tu consulta aquí..."></textarea>
+                            <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+                        </div>
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6 mb-4" data-aos="fade-left" data-aos-duration="1000">
+                    <h2 class="text-primary mb-4">Nuestra Información de Contacto</h2>
+                    <ul class="list-unstyled contact-info">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-3 fa-lg text-custom-aqua"></i>
+                            <strong>Dirección:</strong> Av. Siempre Viva 742, Concordia, Entre Ríos, Argentina
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone me-3 fa-lg text-custom-aqua"></i>
+                            <strong>Teléfono:</strong> <a href="tel:+5493454445566" class="text-decoration-none text-dark">+54 9 345 444-5566</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-3 fa-lg text-custom-aqua"></i>
+                            <strong>Email:</strong> <a href="mailto:info@fiestasmagicas.com" class="text-decoration-none text-dark">info@fiestasmagicas.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fab fa-whatsapp me-3 fa-lg text-custom-aqua"></i>
+                            <strong>WhatsApp:</strong> <a href="https://wa.me/5493454445566" target="_blank" class="text-decoration-none text-dark">+54 9 345 444-5566</a>
+                        </li>
+                    </ul>
+
+                    <h2 class="text-primary mb-4 mt-5">Dónde Encontrarnos</h2>
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.905660601399!2d-58.01633592453664!3d-31.442125790587847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ade3b00676a165%3A0x1d5f2f5b5f2f5b5f!2sConcordia%2C%20Entre%20R%C3%ADos!5e0!3m2!1ses-419!2sar!4v1701380000000!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-white py-5 mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Fiestas Infantiles Mágicas</h5>
+                        <p>Tu aliado perfecto para organizar eventos inolvidables para los más pequeños.</p>
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas Footer" height="40" class="mt-2">
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                            <li><a href="salones.html" class="text-white text-decoration-none">Salones</a></li>
+                            <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                            <li><a href="presupuesto.html" class="text-white text-decoration-none">Presupuesto</a></li>
+                            <li><a href="institucional.html" class="text-white text-decoration-none">Institucional</a></li>
+                            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Síguenos</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://facebook.com" class="text-white text-decoration-none" aria-label="Visitar Facebook de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-facebook-f me-2"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com" class="text-white text-decoration-none" aria-label="Visitar Instagram de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-instagram me-2"></i> Instagram
+                                </a>
+                            </li>
+                        </ul>
+                        <h5 class="mt-4 mb-3 footer-title">Pagos aceptados</h5>
+                        <div class="d-flex gap-3">
+                            <i class="fab fa-cc-visa fa-2x" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard fa-2x" title="MasterCard"></i>
+                            <i class="fab fa-cc-amex fa-2x" title="American Express"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4 pt-4 border-top border-secondary">
+                <p class="text-center mb-0">© 2025 Fiestas Infantiles Mágicas. Todos los derechos reservados. <a href="https://www.argentina.gob.ar/terminos-y-condiciones" class="text-secondary text-decoration-none">Términos y condiciones.</a></p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/login.js"></script>
+        <script type="module" src="js/contacto.js"></script>
+    </body>
+</html>

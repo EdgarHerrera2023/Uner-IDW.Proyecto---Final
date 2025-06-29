@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Página de inicio de sesión para el panel de administración de Fiestas Infantiles Mágicas." />
+        <meta name="keywords" content="login, administración, acceso, panel, control, fiestas infantiles" />
+        <meta name="author" content="IDW SA" />
+        <title>Iniciar Sesión - Fiestas Infantiles Mágicas</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="stylesheet" href="css/estilos.css" />
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+
+        <div id="alert-placeholder" class="fixed-top mt-3 text-center w-100" style="z-index: 1050;"></div>
+
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light py-3">
+                <div class="container">
+                    <a class="navbar-brand mx-auto" href="index.html">
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas" height="50">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-grow-1 d-flex align-items-center justify-content-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header bg-primary text-white text-center py-4">
+                                <h3 class="fw-light my-2">Acceso al Panel de Administración</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <form id="login-form" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="inputUsername" class="form-label">Usuario</label>
+                                        <input class="form-control" id="inputUsername" type="text" placeholder="Ingresa tu usuario" required />
+                                        <div class="invalid-feedback">
+                                            Por favor, ingresa tu usuario.
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label for="inputPassword" class="form-label">Contraseña</label>
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Ingresa tu contraseña" required />
+                                        <div class="invalid-feedback">
+                                            Por favor, ingresa tu contraseña.
+                                        </div>
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg">Acceder</button>
+                                    </div>
+                                    <div class="mt-3 text-center">
+                                        <a href="#" class="text-muted">¿Olvidaste tu contraseña? (Funcionalidad no implementada)</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-dark text-white py-4 mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">© 2025 Fiestas Infantiles Mágicas. Todos los derechos reservados. <a href="terminos-condiciones.html" class="text-muted text-decoration-none">Términos y condiciones</a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/login.js"></script>
+        <script type="module">
+        // Importa las funciones necesarias desde login.js y main.js
+        import { loginUser, redirectToAdminDashboard } from './js/login.js'; // Asegúrate de que esta ruta sea correcta
+        import { showAlert } from './js/main.js'; // Asegúrate de que esta ruta sea correcta
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('login-form');
+
+            if (loginForm) {
+                loginForm.addEventListener('submit', async (event) => {
+                    event.preventDefault(); // Evita el envío del formulario por defecto
+
+                    // Bootstrap validación de formulario
+                    if (!loginForm.checkValidity()) {
+                        event.stopPropagation();
+                        loginForm.classList.add('was-validated');
+                        return;
+                    }
+
+                    const username = document.getElementById('inputUsername').value;
+                    const password = document.getElementById('inputPassword').value;
+
+                    // Llama a la función de login (que ahora maneja la API y el fallback local)
+                    const success = await loginUser(username, password);
+
+                    if (success) {
+                        // Si el login fue exitoso, redirige al dashboard de administración
+                        redirectToAdminDashboard();
+                    }
+                    // Si no fue exitoso, la función loginUser ya muestra una alerta de error.
+                });
+            }
+        });
+    </script>
+
+    </body>
+</html>

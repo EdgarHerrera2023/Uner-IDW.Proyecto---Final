@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Solicita tu presupuesto personalizado para fiestas infantiles mágicas con salones temáticos y servicios únicos.">
+		<meta name="keywords" content="presupuesto, fiestas infantiles, salones, servicios, Concordia, Entre Ríos">
+		<meta name="author" content="IDW SA">
+		<title>Solicitar Presupuesto - Fiestas Infantiles Mágicas</title>
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="assets/iconGlobo.ico" type="image/x-icon">
+	</head>
+
+	<body class="d-flex flex-column min-vh-100">
+
+		<div id="alert-placeholder" class="fixed-top mt-3 text-center w-100" style="z-index: 1050;"></div>
+
+		<header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas" height="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="salones.html">Salones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="presupuesto.html">Presupuesto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="institucional.html">Institucional</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item" id="nav-login-item">
+                                <a class="nav-link btn btn-primary text-white ms-2 px-3" href="login.html">Acceso Clientes</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-logout-item">
+                                <a class="nav-link btn btn-outline-danger ms-2 px-3" href="#" id="logout-btn-public">Cerrar Sesión</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-admin-link-container">
+                                <a class="nav-link btn btn-outline-info ms-2 px-3" href="admin/administracion.html" id="nav-admin-link">Administración</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+		<main class="container my-5">
+			<h1 class="text-center mb-5 section-title" data-aos="fade-up">Solicita Tu Presupuesto</h1>
+			<p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Completa el siguiente formulario para obtener una estimación personalizada de tu evento mágico.</p>
+
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<form id="presupuesto-form" class="needs-validation" novalidate data-aos="fade-up" data-aos-delay="200">
+						<h3 class="mb-4 text-primary">Datos del Evento</h3>
+						<div class="mb-3">
+							<label for="full-name" class="form-label">Nombre Completo</label>
+							<input type="text" class="form-control" id="full-name" required placeholder="Ej: María Rodríguez">
+							<div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+						</div>
+						<div class="mb-3">
+							<label for="event-date" class="form-label">Fecha del Evento</label>
+							<input type="date" class="form-control" id="event-date" required>
+							<div class="invalid-feedback">Por favor, selecciona la fecha del evento.</div>
+						</div>
+						<div class="mb-3">
+							<label for="event-type" class="form-label">Tipo de Evento</label>
+							<input type="text" class="form-control" id="event-type" placeholder="Ej: Cumpleaños, Bautismo, Reunión">
+						</div>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<label for="children-count" class="form-label">Cantidad de Niños</label>
+								<input type="number" class="form-control" id="children-count" min="1" required value="10">
+								<div class="invalid-feedback">Mínimo 1 niño.</div>
+							</div>
+							<div class="col-md-6">
+								<label for="adults-count" class="form-label">Cantidad de Adultos</label>
+								<input type="number" class="form-control" id="adults-count" min="0" value="0">
+								<div class="invalid-feedback">Mínimo 0 adultos.</div>
+							</div>
+						</div>
+
+						<h3 class="mb-4 mt-5 text-primary">Selección de Salón y Servicios</h3>
+						<div class="mb-3">
+							<label for="salon-select" class="form-label">Salón Deseado</label>
+							<select class="form-select" id="salon-select" required>
+								<option value="">Selecciona un salón</option>
+								</select>
+							<div class="invalid-feedback">Por favor, selecciona un salón.</div>
+						</div>
+
+						<div class="mb-3">
+							<label class="form-label">Servicios Adicionales</label>
+							<div id="servicios-checkboxes" class="row">
+								</div>
+						</div>
+
+						<h3 class="mb-4 mt-5 text-primary">Información de Contacto</h3>
+						<div class="mb-3">
+							<label for="contact-info" class="form-label">Email o Teléfono</label>
+							<input type="text" class="form-control" id="contact-info" required placeholder="Ej: tu_email@dominio.com o +54911...">
+							<div class="invalid-feedback">Por favor, ingresa un email o teléfono de contacto.</div>
+						</div>
+
+						<div class="alert alert-info mt-4" role="alert">
+							<h4 class="alert-heading">Valor Total Estimado:</h4>
+							<p class="mb-0 fs-3 fw-bold text-primary" id="total-value-display">$0</p>
+						</div>
+
+						<div class="d-grid gap-2 mt-5">
+							<button type="submit" class="btn btn-success btn-lg">Solicitar Presupuesto</button>
+							<button type="reset" class="btn btn-outline-secondary">Limpiar Formulario</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="bg-dark text-white py-5 mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Fiestas Infantiles Mágicas</h5>
+                        <p>Tu aliado perfecto para organizar eventos inolvidables para los más pequeños.</p>
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas Footer" height="40" class="mt-2">
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                            <li><a href="salones.html" class="text-white text-decoration-none">Salones</a></li>
+                            <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                            <li><a href="presupuesto.html" class="text-white text-decoration-none">Presupuesto</a></li>
+                            <li><a href="institucional.html" class="text-white text-decoration-none">Institucional</a></li>
+                            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Síguenos</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://facebook.com" class="text-white text-decoration-none" aria-label="Visitar Facebook de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-facebook-f me-2"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com" class="text-white text-decoration-none" aria-label="Visitar Instagram de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-instagram me-2"></i> Instagram
+                                </a>
+                            </li>
+                        </ul>
+                        <h5 class="mt-4 mb-3 footer-title">Pagos aceptados</h5>
+                        <div class="d-flex gap-3">
+                            <i class="fab fa-cc-visa fa-2x" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard fa-2x" title="MasterCard"></i>
+                            <i class="fab fa-cc-amex fa-2x" title="American Express"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4 pt-4 border-top border-secondary">
+                <p class="text-center mb-0">© 2025 Fiestas Infantiles Mágicas. Todos los derechos reservados. <a href="https://www.argentina.gob.ar/terminos-y-condiciones" class="text-secondary text-decoration-none">Términos y condiciones.</a></p>
+            </div>
+        </footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script type="module" src="js/main.js"></script>
+		<script type="module" src="js/presupuestoPublic.js"></script>
+		<script type="module" src="js/login.js"></script>
+		<script>
+				document.addEventListener('DOMContentLoaded', function() {
+						AOS.init(); // Inicialización de AOS
+				});
+		</script>
+	</body>
+</html>

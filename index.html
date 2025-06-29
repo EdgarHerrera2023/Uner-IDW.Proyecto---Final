@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Encuentra el salón perfecto para fiestas infantiles en diversas temáticas.">
+        <meta name="keywords" content="salones, fiestas infantiles, temáticas, eventos, celebración">
+        <meta name="author" content="IDW SA">
+        <title>Fiestas Infantiles Mágicas - IDW SA</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="assets/iconGlobo.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div id="alert-placeholder" class="fixed-top mt-3 text-center w-100" style="z-index: 1050;"></div>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas" height="50">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="salones.html">Salones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="presupuesto.html">Presupuesto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="institucional.html">Institucional</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item" id="nav-login-item">
+                                <a class="nav-link btn btn-primary text-white ms-2 px-3" href="login.html">Acceso Clientes</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-logout-item">
+                                <a class="nav-link btn btn-outline-danger ms-2 px-3" href="#" id="logout-btn-public">Cerrar Sesión</a>
+                            </li>
+                            <li class="nav-item d-none" id="nav-admin-link-container">
+                                <a class="nav-link btn btn-outline-info ms-2 px-3" href="admin/administracion.html" id="nav-admin-link">Administración</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="img/img3.jpg" class="d-block w-100 hero-img" alt="Fiesta temática de superhéroes en salón infantil">
+                        <div class="carousel-caption d-none d-md-block text-shadow" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="animate__animated animate__fadeInDown">¡Celebra con tus Superhéroes Favoritos!</h5>
+                            <p class="animate__animated animate__fadeInUp animate__delay-1s">Salones temáticos llenos de aventura para un cumpleaños inolvidable.</p>
+                            <a href="salones.html" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite animate__delay-2s">Ver Salones</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/img5.jpg" class="d-block w-100 hero-img" alt="Niños divirtiéndose en una fiesta con decoración de princesas">
+                        <div class="carousel-caption d-none d-md-block text-shadow" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="animate__animated animate__fadeInDown">El Reino de las Princesas te Espera</h5>
+                            <p class="animate__animated animate__fadeInUp animate__delay-1s">Un ambiente mágico para que tus sueños de cuento de hadas se hagan realidad.</p>
+                            <a href="servicios.html" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite animate__delay-2s">Descubrir Servicios</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="img/animacion_ejemplo.jpg" class="d-block w-100 hero-img" alt="Niños jugando con burbujas y animadores en una fiesta al aire libre">
+                        <div class="carousel-caption d-none d-md-block text-shadow" data-aos="fade-up" data-aos-duration="1000">
+                            <h5 class="animate__animated animate__fadeInDown">Animación y Diversión Garantizada</h5>
+                            <p class="animate__animated animate__fadeInUp animate__delay-1s">Los mejores animadores para convertir tu fiesta en una aventura única.</p>
+                            <a href="presupuesto.html" class="btn btn-primary btn-lg animate__animated animate__pulse animate__infinite animate__delay-2s">Pedir Presupuesto</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+
+            <section id="salones-destacados" class="container py-5">
+                <h2 class="text-center mb-4 section-title" data-aos="fade-up">Nuestros Salones Destacados</h2>
+                <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Descubre los lugares más mágicos para tu próxima celebración. Ambientes únicos y adaptados a todas las edades.</p>
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="salones-destacados-container">
+                    </div>
+                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                    <a href="salones.html" class="btn btn-outline-primary btn-lg">Ver Todos los Salones</a>
+                </div>
+            </section>
+
+            <section id="servicios-adicionales" class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4 section-title" data-aos="fade-up">Servicios para una Fiesta Inolvidable</h2>
+                    <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Complementa tu evento con opciones que harán la diferencia. Desde animación hasta catering gourmet.</p>
+                    <div class="row row-cols-1 row-cols-md-3 g-4" id="servicios-adicionales-container">
+                        </div>
+                    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                        <a href="servicios.html" class="btn btn-outline-primary btn-lg">Explorar Servicios</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cta-presupuesto" class="py-5 text-center bg-gradient-primary rounded shadow" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="container">
+                <h2 class="text-white mb-4 display-5 fw-bold text-shadow">Crea Tu Fiesta Ideal</h2>
+                <p class="lead text-white-75 mb-4 text-shadow">Recibe un presupuesto personalizado en minutos. ¡Es fácil y rápido!</p>
+                <a href="presupuesto.html" class="btn btn-outline-light btn-lg animate__animated animate__pulse animate__infinite">Solicitar Presupuesto Ahora</a>
+            </div>
+        </section>
+
+        </main>
+
+        <footer class="bg-dark text-white py-5 mt-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Fiestas Infantiles Mágicas</h5>
+                        <p>Tu aliado perfecto para organizar eventos inolvidables para los más pequeños.</p>
+                        <img src="img/logo.png" alt="Logo Fiestas Infantiles Mágicas Footer" height="40" class="mt-2">
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                            <li><a href="salones.html" class="text-white text-decoration-none">Salones</a></li>
+                            <li><a href="servicios.html" class="text-white text-decoration-none">Servicios</a></li>
+                            <li><a href="presupuesto.html" class="text-white text-decoration-none">Presupuesto</a></li>
+                            <li><a href="institucional.html" class="text-white text-decoration-none">Institucional</a></li>
+                            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <h5 class="mb-3 footer-title">Síguenos</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://facebook.com" class="text-white text-decoration-none" aria-label="Visitar Facebook de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-facebook-f me-2"></i> Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://instagram.com" class="text-white text-decoration-none" aria-label="Visitar Instagram de Fiestas Infantiles Mágicas">
+                                    <i class="fab fa-instagram me-2"></i> Instagram
+                                </a>
+                            </li>
+                        </ul>
+                        <h5 class="mt-4 mb-3 footer-title">Pagos aceptados</h5>
+                        <div class="d-flex gap-3">
+                            <i class="fab fa-cc-visa fa-2x" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard fa-2x" title="MasterCard"></i>
+                            <i class="fab fa-cc-amex fa-2x" title="American Express"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-4 pt-4 border-top border-secondary">
+                <p class="text-center mb-0">© 2025 Fiestas Infantiles Mágicas. Todos los derechos reservados. <a href="https://www.argentina.gob.ar/terminos-y-condiciones" class="text-secondary text-decoration-none">Términos y condiciones.</a></p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="module" src="js/main.js"></script>
+        <script type="module" src="js/salones.js"></script>
+        <script type="module" src="js/servicios.js"></script>
+        <script type="module" src="js/login.js"></script>
+    </body>
+</html>
